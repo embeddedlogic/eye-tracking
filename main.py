@@ -20,7 +20,7 @@ while True:
 
     if not success:
         print("Not working loser.")
-        continue
+        break
 
     # flip video 
     frame = cv2.flip(frame, 1)
@@ -51,7 +51,8 @@ while True:
             x = int(face.landmark[i].x * w)
             y = int(face.landmark[i].y * h)
             cv2.circle(frame, (x, y), 2, (0, 255, 0), -1)
-
+        x = int(face.landmark
+        
     # show cam
     cv2.imshow("Webcam", frame)
 
